@@ -5,6 +5,7 @@ machine:
     ANDROID_HOME: /usr/local/android-sdk-linux
 dependencies:
   override:
+    - echo y | android update sdk --no-ui --all --filter "tools"
     - echo y | android update sdk --no-ui --filter "android-24,build-tools-24.0.1"
 deployment:
   master:
